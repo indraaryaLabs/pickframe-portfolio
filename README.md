@@ -6,7 +6,7 @@ Aplikasi ini **berjalan di produksi** dan digunakan studio foto nyata:
 
 > **[pickframe.satuarah.click](https://pickframe.satuarah.click/)** | [Harga](https://pickframe.satuarah.click/pricing) | [Panduan](https://pickframe.satuarah.click/guide)
 
-> ⚠ **Catatan penting** - Ini **bukan** repositori kode lengkap PickFrame. Kode lengkap aplikasi produksi tidak dipublikasikan. Repo ini adalah **portofolio**: penjelasan produk, arsitektur sistem, screenshot, dan **cuplikan kode terpilih** sebagai bukti kualitas engineering. Lihat [Lisensi](LICENSE).
+> **Catatan penting** - Ini **bukan** repositori kode lengkap PickFrame. Kode lengkap aplikasi produksi tidak dipublikasikan. Repo ini adalah **portofolio**: penjelasan produk, arsitektur sistem, screenshot, dan **cuplikan kode terpilih** sebagai bukti kualitas engineering. Lihat [Lisensi](LICENSE).
 
 ## Apa yang PickFrame kerjakan
 
