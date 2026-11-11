@@ -4,15 +4,15 @@
 
 Aplikasi ini **berjalan di produksi** dan digunakan studio foto nyata:
 
-> 🔗 **[pickframe.satuarah.click](https://pickframe.satuarah.click/)** · [Harga](https://pickframe.satuarah.click/pricing) · [Panduan](https://pickframe.satuarah.click/guide)
+> **[pickframe.satuarah.click](https://pickframe.satuarah.click/)** | [Harga](https://pickframe.satuarah.click/pricing) | [Panduan](https://pickframe.satuarah.click/guide)
 
-> ⚠️ **Catatan penting** — Ini **bukan** repositori kode lengkap PickFrame. Kode lengkap aplikasi produksi tidak dipublikasikan. Repo ini adalah **portofolio**: penjelasan produk, arsitektur sistem, screenshot, dan **cuplikan kode terpilih** sebagai bukti kualitas engineering. Lihat [Lisensi](LICENSE).
+> ⚠ **Catatan penting** - Ini **bukan** repositori kode lengkap PickFrame. Kode lengkap aplikasi produksi tidak dipublikasikan. Repo ini adalah **portofolio**: penjelasan produk, arsitektur sistem, screenshot, dan **cuplikan kode terpilih** sebagai bukti kualitas engineering. Lihat [Lisensi](LICENSE).
 
 ## Apa yang PickFrame kerjakan
 
 1. **Jadwalkan** sesi foto. Paket menentukan durasi, harga, dan pengaturan galeri; kontak WhatsApp klien tersimpan bersama proyek. Input cepat menerima daftar klien yang dapat diperiksa per baris.
 2. **Kerjakan** dari daftar proyek atau kalender. Tiga tampilan workspace tersedia (bawaan, Studio Command/kalender, Permanent Studio/daftar berdampingan) dengan bahasa ID/EN serta tema terang/gelap/sistem.
-3. **Bagikan galeri** dari folder Google Drive. Klien membuka tautan tanpa akun, memilih foto favorit, dan hasilnya tercatat di proyek. Foto asli tidak pernah meninggalkan Drive studio — API hanya membaca folder yang dibagikan.
+3. **Bagikan galeri** dari folder Google Drive. Klien membuka tautan tanpa akun, memilih foto favorit, dan hasilnya tercatat di proyek. Foto asli tidak pernah meninggalkan Drive studio - API hanya membaca folder yang dibagikan.
 4. **Terbitkan dokumen**: invoice DP, pelunasan, penuh, dan kuitansi. Dapat dicetak sebagai PDF atau diekspor PNG/JPG. Pembayaran dicatat terpisah dan tetap dapat dikoreksi.
 5. **Ekspor laporan** sebagai buku Excel baru, atau perbarui buku Excel yang sudah ada tanpa menghilangkan perubahan pemiliknya.
 
@@ -22,8 +22,8 @@ Aplikasi ini **berjalan di produksi** dan digunakan studio foto nyata:
 | Progres order & pembayaran | ![Order progress](screenshots/order-progress.png) |
 | Invoice & kuitansi | ![Dokumen](screenshots/invoices.png) |
 | Galeri pilihan klien | ![Galeri klien](screenshots/client-gallery.png) |
-| PickFrame Select — daftar berkas | ![Select list](screenshots/select-list.png) |
-| PickFrame Select — pilih folder | ![Select folder](screenshots/select-folder.png) |
+| PickFrame Select - daftar berkas | ![Select list](screenshots/select-list.png) |
+| PickFrame Select - pilih folder | ![Select folder](screenshots/select-folder.png) |
 
 ## Komponen sistem
 
@@ -36,7 +36,7 @@ Aplikasi ini **berjalan di produksi** dan digunakan studio foto nyata:
 
 ## Arsitektur singkat
 
-- **Autentikasi**: Supabase Auth menerbitkan JWT; backend Go memverifikasinya lewat **JWKS** (asimetris, algorithm confusion dicegah dengan whitelist `ES256`/`RS256`). Backend hanya memeriksa token — tidak pernah memegang kunci privat.
+- **Autentikasi**: Supabase Auth menerbitkan JWT; backend Go memverifikasinya lewat **JWKS** (asimetris, algorithm confusion dicegah dengan whitelist `ES256`/`RS256`). Backend hanya memeriksa token - tidak pernah memegang kunci privat.
 - **Akses tanpa akun**: galeri klien dan dokumen publik memakai **token yang dapat dicabut**, bukan akun. Percobaan menebak token di-rate-limit per IP dengan fixed-window upsert di PostgreSQL.
 - **Multi-tenancy**: Row Level Security di PostgreSQL mengikat setiap baris ke `user_id`; middleware hanya menetapkan identitas, kepemilikan resource tetap diperiksa per query.
 - **Kuota**: ditegakkan atomik per akun (Free/Pro/Studio + trial 24 jam), berganti mingguan.
@@ -60,7 +60,7 @@ Beberapa file diambil apa adanya dari codebase produksi untuk menunjukkan standa
 
 PickFrame adalah **produk komersial yang sedang berjalan**, bukan template open source. Memangkas keputusan lisensi dari kode yang sudah dirilis tidak mungkin dilakukan setelahnya: kode yang dirilis terbuka akan selamanya terbuka bagi siapa pun yang sudah menyalinnya.
 
-Karena itu repo ini berisi cukup untuk **membaca dan menilai kualitas engineering** — deskripsi produk, arsitektur, dan cuplikan nyata — tanpa memberikan salinan yang dapat dijalankan sebagai layanan.
+Karena itu repo ini berisi cukup untuk **membaca dan menilai kualitas engineering** - deskripsi produk, arsitektur, dan cuplikan nyata - tanpa memberikan salinan yang dapat dijalankan sebagai layanan.
 
 ## Teknologi
 
