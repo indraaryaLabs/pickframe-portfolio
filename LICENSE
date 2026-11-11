@@ -1,0 +1,48 @@
+Copyright (c) 2026 indraaryaLabs. All rights reserved.
+
+SOURCE-AVAILABLE, NOT OPEN SOURCE
+
+This repository is published as a portfolio: so that the product, its
+architecture, and selected excerpts of its source can be read, reviewed,
+and learned from. That is the only permission granted.
+
+You MAY:
+
+  - read the source code and documentation in this repository;
+  - clone the repository for the purpose of reading or studying it;
+  - quote short excerpts with attribution, for example in a review, an
+    article, or a discussion.
+
+You MAY NOT, without prior written permission from the copyright holder:
+
+  - use this software, in whole or in substantial part, to operate a
+    product or service, whether or not that product or service is
+    charged for;
+  - redistribute, sublicense, or sell copies of this software or of
+    works derived from it;
+  - use the source code in this repository as the basis of a product
+    that competes with or replaces the published service PickFrame;
+  - remove or alter this notice.
+
+No warranty is given. The software and documentation are provided
+"as is", without warranty of any kind, express or implied, and the
+copyright holder is not liable for any claim, damage, or other
+liability arising from them.
+
+For any permission beyond the above, open an issue on this repository.
+
+---
+
+Why this and not MIT.
+
+PickFrame is a running commercial SaaS. A permissive licence would allow
+anyone to run it as a competing service, and that decision cannot be
+undone once made: code released under MIT stays available under MIT for
+everyone who already has a copy.
+
+A source-available notice costs nothing for the purpose this repository
+serves — being read — while leaving the commercial question closed.
+
+If the intent later changes to genuine open source, replacing this file
+with a standard licence text is a one-file change. Going the other
+direction is not.
